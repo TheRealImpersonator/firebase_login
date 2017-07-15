@@ -1,5 +1,4 @@
 // Initialize Firebase
-var a;
 var config = {
   apiKey: "AIzaSyA0816xskmsl83KMHC0Bj3AvN5G2QxtMZc",
   authDomain: "cloudrdev.firebaseapp.com",
@@ -47,7 +46,6 @@ verifyBtn.addEventListener('click', event => {
 
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
-    a = user;
     console.log(user);
     loginBtn.classList.add("hide");
     signUpBtn.classList.add("hide");
