@@ -51,6 +51,8 @@ firebase.auth().onAuthStateChanged(user => {
     console.log(user);
     loginBtn.classList.add("hide");
     signUpBtn.classList.add("hide");
+    emailTxt.classList.add("hide");
+    passwordTxt.classList.add("hide");
     logoutBtn.classList.remove("hide");
     if(user.emailVerified) {
       verifyBtn.classList.add("hide");
@@ -61,6 +63,8 @@ firebase.auth().onAuthStateChanged(user => {
     console.log("Not logged in.");
     loginBtn.classList.remove("hide");
     signUpBtn.classList.remove("hide");
+    emailTxt.classList.remove("hide");
+    passwordTxt.classList.remove("hide");
     logoutBtn.classList.add("hide");
     verifyBtn.classList.add("hide");
   }
